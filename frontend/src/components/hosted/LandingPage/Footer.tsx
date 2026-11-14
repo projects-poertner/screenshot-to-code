@@ -47,7 +47,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="mailto:support@getwhimsyworks.com"
+                    href="mailto:screenshottocode@evolvai.biz"
                     className="text-sm landing-text-muted hover-line"
                   >
                     Contact
@@ -90,7 +90,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="border-t landing-border mt-16 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm landing-text-muted">
-            {new Date().getFullYear()} WhimsyWorks, Inc.
+            {new Date().getFullYear()} EvolvAI LLC
           </p>
           <p className="text-sm landing-text-muted font-editorial italic">
             Made in NYC

@@ -655,7 +655,7 @@ class PromptCreationStage:
         except Exception as e:
             sentry_sdk.capture_exception(e)
             await self.throw_error(
-                "Error assembling prompt. Contact support at support@getwhimsyworks.com"
+                "Error assembling prompt. Contact support at screenshottocode@evolvai.biz"
             )
             raise
 
