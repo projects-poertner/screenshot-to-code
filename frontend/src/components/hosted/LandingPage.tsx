@@ -563,6 +563,23 @@ function LandingPage() {
       </section>
 
       {/* Logo Wall */}
+      <section className="py-12 px-6 border-y landing-border overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-center landing-text-muted max-w-2xl mx-auto">
+            Fully open source with{" "}
+            <a
+              href="https://github.com/abi/screenshot-to-code"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="stat-highlight text-[#2563EB] hover:underline"
+            >
+              72,929+
+            </a>{" "}
+            stars on GitHub.
+          </p>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="py-24 px-6 landing-bg overflow-hidden">
         <div className="max-w-7xl mx-auto">
