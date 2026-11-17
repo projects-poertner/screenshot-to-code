@@ -1,6 +1,7 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import Footer from "./LandingPage/Footer";
+import SiteNav from "./SiteNav";
 import {
   OTHER_SERVICES,
   PACKAGES,
@@ -22,6 +23,8 @@ const STEPS = [
 
 const HirePage: React.FC = () => {
   return (
+    <>
+    <SiteNav />
     <div className="container mx-auto px-4 py-10 max-w-5xl">
       <div className="text-center mb-10">
         <h1 className="text-3xl sm:text-4xl font-bold mb-3">
@@ -148,6 +151,7 @@ const HirePage: React.FC = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 
