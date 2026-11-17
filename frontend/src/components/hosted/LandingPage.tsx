@@ -9,6 +9,7 @@ import {
 } from "react-icons/si";
 import type { IconType } from "react-icons";
 import Footer from "./LandingPage/Footer";
+import BlackFridayPopup from "./BlackFridayPopup";
 import { SignUp } from "@clerk/react";
 import { Component, useState, type ErrorInfo, type ReactNode } from "react";
 import { Dialog, DialogContent } from "../ui/dialog";
@@ -240,6 +241,7 @@ function LandingPage() {
 
   return (
     <div className="min-h-screen landing-bg font-display">
+      <BlackFridayPopup onClaim={signIn} suppressed={isAuthPopupOpen} />
       {/* Auth dialog */}
       <Dialog
         open={isAuthPopupOpen}
