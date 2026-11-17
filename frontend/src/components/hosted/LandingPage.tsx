@@ -199,6 +199,12 @@ function SafeTweet({ testimonial }: { testimonial: Testimonial }) {
 const isClerkCallbackHash = () =>
   /(sso-callback|verify)/.test(window.location.hash);
 
+// Other pages (/hire, /pricing, /faqs) link to "/?signup=1" so that
+// "Get Started" opens the sign-up dialog directly.
+const shouldOpenSignUp = () =>
+  isClerkCallbackHash() ||
+  new URLSearchParams(window.location.search).get("signup") === "1";
+
 // Shows a labeled placeholder until the example image is dropped in (and
 // loads), so the section never renders a broken-image icon.
 function ExampleMedia({ src, label }: {
@@ -231,7 +237,7 @@ function ExampleMedia({ src, label }: {
 }
 
 function LandingPage() {
-  const [isAuthPopupOpen, setIsAuthPopupOpen] = useState(isClerkCallbackHash);
+  const [isAuthPopupOpen, setIsAuthPopupOpen] = useState(shouldOpenSignUp);
 
   const signIn = () => {
     setIsAuthPopupOpen(true);
