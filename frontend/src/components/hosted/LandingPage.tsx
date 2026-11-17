@@ -20,8 +20,6 @@ import type {
   TweetEntities,
 } from "react-tweet/api";
 
-const LOGOS = ["microsoft", "amazon", "mit", "stanford", "bytedance", "baidu"];
-
 // Screenshot-to-Code examples. Drop the paired images into frontend/public/demos/
 // using these exact names; until then each slot shows a labeled placeholder.
 const SCREENSHOT_EXAMPLES = [
@@ -348,7 +346,7 @@ function LandingPage() {
                 <button
                   onClick={() =>
                     window.open(
-                      "https://github.com/abi/screenshot-to-code",
+                      "https://github.com/projects-poertner/screenshot-to-code",
                       "_blank"
                     )
                   }
@@ -565,27 +563,6 @@ function LandingPage() {
       </section>
 
       {/* Logo Wall */}
-      <section className="py-16 px-6 border-y landing-border overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-center landing-text-muted mb-12 max-w-2xl mx-auto">
-            #1 tool used by developers and designers from leading companies.
-            <br className="hidden sm:block" />
-            {" "}Fully open source with{" "}
-            <span className="stat-highlight text-[#2563EB]">72,000+</span> stars on GitHub.
-          </p>
-          <div className="flex gap-12 sm:gap-16 items-center justify-center flex-wrap">
-            {LOGOS.map((companyName) => (
-              <img
-                key={companyName}
-                className="h-8 sm:h-10 w-auto object-contain grayscale opacity-50 hover:opacity-80 transition-opacity logo-dark-invert"
-                src={`/logos/${companyName}.png`}
-                alt={companyName}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Testimonials */}
       <section className="py-24 px-6 landing-bg overflow-hidden">
         <div className="max-w-7xl mx-auto">
@@ -633,7 +610,7 @@ function LandingPage() {
             <button
               onClick={() =>
                 window.open(
-                  "https://github.com/abi/screenshot-to-code",
+                  "https://github.com/projects-poertner/screenshot-to-code",
                   "_blank"
                 )
               }

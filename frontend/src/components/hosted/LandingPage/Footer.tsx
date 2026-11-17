@@ -27,7 +27,7 @@ const Footer = () => {
               <ul className="space-y-4">
                 <li>
                   <a
-                    href="https://github.com/abi/screenshot-to-code"
+                    href="https://github.com/projects-poertner/screenshot-to-code"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm landing-text-muted hover-line"
@@ -37,7 +37,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://github.com/abi/screenshot-to-code#readme"
+                    href="https://github.com/projects-poertner/screenshot-to-code#readme"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm landing-text-muted hover-line"

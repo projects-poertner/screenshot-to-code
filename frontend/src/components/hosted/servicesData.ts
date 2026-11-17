@@ -3,7 +3,7 @@
 // and paste it into `paymentUrl`. Until then the order button opens a
 // pre-filled email to support.
 
-export const SERVICES_EMAIL = "support@screenshottocode.com";
+export const SERVICES_EMAIL = "screenshottocode@evolvai.biz";
 
 export interface ServicePackage {
   id: string;

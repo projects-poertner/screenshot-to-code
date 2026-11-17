@@ -1,7 +1,6 @@
 import { FaKeyboard, FaLayerGroup, FaMagic, FaVideo } from "react-icons/fa";
 import PricingPlans from "./payments/PricingPlans";
 
-const LOGOS = ["microsoft", "amazon", "mit", "stanford", "bytedance", "baidu"];
 
 const FEATURES = [
   {
@@ -104,24 +103,6 @@ function OnboardingPaywall({ experimentGroup }: OnboardingPaywallProps) {
           ))}
         </div>
 
-        {/* Social proof logos */}
-        <div className="border-t border-gray-100 pt-8 dark:border-zinc-800">
-          <p className="mb-4 text-center text-xs text-gray-400 dark:text-zinc-500">
-            Trusted by engineers and designers at
-          </p>
-          <div className="mx-auto grid max-w-md grid-cols-6 items-center gap-x-4">
-            {LOGOS.map((name) => (
-              <img
-                key={name}
-                className="col-span-1 h-6 w-full object-contain opacity-40 grayscale transition-opacity hover:opacity-80"
-                src={`/logos/${name}.png`}
-                alt={name}
-                width={80}
-                height={24}
-              />
-            ))}
-          </div>
-        </div>
       </div>
     </div>
   );
