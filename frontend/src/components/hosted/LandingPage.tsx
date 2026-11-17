@@ -288,6 +288,18 @@ function LandingPage() {
               </span>
             </div>
             <div className="flex items-center gap-3 sm:gap-6">
+              <a
+                href="/hire"
+                className="text-sm landing-text-muted hover-line hidden sm:block"
+              >
+                Hire Developers
+              </a>
+              <a
+                href="/pricing"
+                className="text-sm landing-text-muted hover-line hidden sm:block"
+              >
+                Pricing
+              </a>
               <button
                 onClick={signIn}
                 className="text-sm landing-text-muted hover-line hidden sm:block"
@@ -314,7 +326,7 @@ function LandingPage() {
               {/* Eyebrow - hidden on mobile to reduce first screen density */}
               <div className="hidden sm:flex items-center gap-3 mb-6">
                 <span className="stat-highlight text-sm text-[#2563EB]">
-                  72,929
+                  81.3k
                 </span>
                 <span className="text-sm landing-text-muted">stars on GitHub</span>
                 <div className="h-px w-12 landing-border border-t" />
@@ -355,7 +367,7 @@ function LandingPage() {
                   <FaGithub className="text-lg" />
                   <span>GitHub</span>
                   <span className="hidden sm:inline landing-github-badge text-xs px-2 py-0.5 rounded-full font-mono">
-                    72.9k
+                    81.3k
                   </span>
                 </button>
               </div>
@@ -613,7 +625,7 @@ function LandingPage() {
           </h2>
 
           <p className="text-xl text-gray-400 mb-10 max-w-xl mx-auto">
-            Join 72,000+ developers building UIs at lightning speed
+            Join 81,000+ developers building UIs at lightning speed
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

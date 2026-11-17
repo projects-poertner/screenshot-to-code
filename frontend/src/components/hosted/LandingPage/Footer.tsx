@@ -13,7 +13,7 @@ const Footer = () => {
             </div>
             <p className="landing-text-muted leading-relaxed">
               AI-powered conversion from screenshots and designs to clean, production-ready
-              code. Open source with 72,000+ GitHub stars.
+              code. Open source with 81,000+ GitHub stars.
             </p>
           </div>
 
@@ -43,6 +43,22 @@ const Footer = () => {
                     className="text-sm landing-text-muted hover-line"
                   >
                     Documentation
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/hire"
+                    className="text-sm landing-text-muted hover-line"
+                  >
+                    Hire Developers
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/pricing"
+                    className="text-sm landing-text-muted hover-line"
+                  >
+                    Pricing
                   </a>
                 </li>
                 <li>

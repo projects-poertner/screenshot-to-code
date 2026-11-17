@@ -40,7 +40,7 @@ function OnboardingPaywall({ experimentGroup }: OnboardingPaywallProps) {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-500 opacity-75"></span>
               <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-500"></span>
             </span>
-            72,000+ GitHub stars
+            81,000+ GitHub stars
           </div>
           {experimentGroup === "delayed_paywall" ? (
             <>
