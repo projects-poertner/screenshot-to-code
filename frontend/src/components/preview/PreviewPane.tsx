@@ -23,6 +23,8 @@ import { downloadCode } from "./download";
 import { normalizeBabelCdn } from "../../lib/babelCdn";
 import { SelectAndEditToolbarButton } from "../select-and-edit/SelectAndEditControls";
 import ImageScanningPreview from "./ImageScanningPreview";
+import DeveloperReviewCta from "../hosted/DeveloperReviewCta";
+import { IS_RUNNING_ON_CLOUD } from "../../config";
 
 function prepareHtmlForNewTab(code: string) {
   const html = normalizeBabelCdn(code);
@@ -266,6 +268,9 @@ function PreviewPane({ settings, onOpenVersions }: Props) {
           />
         </TabsContent>
       </Tabs>
+      {IS_RUNNING_ON_CLOUD && canSelectAndEdit && !!previewCode.trim() && (
+        <DeveloperReviewCta />
+      )}
     </div>
   );
 }
