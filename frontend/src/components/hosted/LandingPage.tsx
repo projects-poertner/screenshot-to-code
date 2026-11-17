@@ -573,7 +573,7 @@ function LandingPage() {
               rel="noopener noreferrer"
               className="stat-highlight text-[#2563EB] hover:underline"
             >
-              72,929+
+              81.3k+
             </a>{" "}
             stars on GitHub.
           </p>
