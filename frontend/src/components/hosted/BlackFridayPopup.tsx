@@ -11,6 +11,7 @@ import {
 const OFFER_ENDS_AT = Date.UTC(2026, 11, 2, 0, 0, 0);
 const DISMISSED_KEY = "black-friday-2026-dismissed";
 const SHOW_DELAY_MS = 1500;
+const COUPON_CODE = "START50";
 
 function wasDismissed(): boolean {
   try {
@@ -38,6 +39,7 @@ export default function BlackFridayPopup({
   suppressed = false,
 }: BlackFridayPopupProps) {
   const [open, setOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     if (Date.now() >= OFFER_ENDS_AT || wasDismissed()) return;
@@ -48,6 +50,16 @@ export default function BlackFridayPopup({
   const close = () => {
     rememberDismissed();
     setOpen(false);
+  };
+
+  const copyCode = async () => {
+    try {
+      await navigator.clipboard.writeText(COUPON_CODE);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Clipboard may be unavailable; the code is still visible to type in.
+    }
   };
 
   const claim = () => {
@@ -99,8 +111,22 @@ export default function BlackFridayPopup({
 
           <button
             type="button"
+            onClick={copyCode}
+            className="mx-auto mt-6 flex items-center gap-3 rounded-xl border border-dashed border-amber-300/60 bg-amber-300/10 px-4 py-2.5 text-sm transition hover:bg-amber-300/20"
+          >
+            <span className="text-zinc-400">Use code</span>
+            <span className="font-mono text-base font-bold tracking-widest text-amber-300">
+              {COUPON_CODE}
+            </span>
+            <span className="text-xs text-zinc-500">
+              {copied ? "Copied!" : "Tap to copy"}
+            </span>
+          </button>
+
+          <button
+            type="button"
             onClick={claim}
-            className="mt-7 w-full rounded-xl bg-gradient-to-r from-amber-300 to-orange-400 px-6 py-3.5 text-base font-bold text-zinc-950 shadow-lg shadow-amber-500/20 transition hover:brightness-110 active:scale-[0.99]"
+            className="mt-4 w-full rounded-xl bg-gradient-to-r from-amber-300 to-orange-400 px-6 py-3.5 text-base font-bold text-zinc-950 shadow-lg shadow-amber-500/20 transition hover:brightness-110 active:scale-[0.99]"
           >
             Claim 50% off
           </button>
