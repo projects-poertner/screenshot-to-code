@@ -23,6 +23,7 @@ import "./index.css";
 import PricingPage from "./components/hosted/PricingPage.tsx";
 import CheckoutSuccessPage from "./components/hosted/CheckoutSuccessPage.tsx";
 import FaqsPage from "./components/hosted/FaqsPage.tsx";
+import HirePage from "./components/hosted/HirePage.tsx";
 import { captureFirstTouchAttribution } from "./lib/attribution.ts";
 
 // Set up Sentry
@@ -81,6 +82,7 @@ root.render(
           )}
 
           <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/hire" element={<HirePage />} />
           <Route path="/faqs" element={<FaqsPage />} />
           <Route path="/checkout-success" element={<CheckoutSuccessPage />} />
         </Routes>
