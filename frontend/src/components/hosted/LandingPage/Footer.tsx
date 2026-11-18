@@ -108,9 +108,6 @@ const Footer = () => {
           <p className="text-sm landing-text-muted">
             {new Date().getFullYear()} EvolvAI LLC
           </p>
-          <p className="text-sm landing-text-muted font-editorial italic">
-            Made in NYC
-          </p>
         </div>
       </div>
     </footer>
